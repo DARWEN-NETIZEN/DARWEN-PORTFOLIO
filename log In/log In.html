@@ -1,0 +1,132 @@
+<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/log In.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="shortcut icon" type="img/x-icon" href='_logo_.jpg'>
+    <title>log--sign</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation" id="">
+            <button class="btnlogin-popup btn btn-outline-light">log in</button>
+            
+            <a href="D:\all project\new\portfolio.html"><button class="btnlogin-popup btn btn-outline-light">GO BACK</button></a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <span class="icon-close"><i class="fa-solid fa-close"></i></span>
+        <div class="form-box login">
+            <h2>log In</h2>
+            <form >
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" required>
+                    <label>email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">remember me
+                    </label>
+                    <a href="" class="text-info">forget password?</a>
+                </div>
+                <button type="submit" class="btn btn-outline-warning w-100">log in</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a style="cursor: pointer;" class="register-link text-info"> register</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-box register">
+            <h2>registeration</h2>
+            <form action="">
+                <div id="input-box" class="input-box">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" required>
+                    <label>username</label>
+                </div>
+                <div id="input-box" class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" required>
+                    <label>email</label>
+                </div>
+                <div id="input-box" class="input-box">
+                    <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label class="form-check-label" for="flexCheckIndeterminate">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">I agree to the terms & conditions
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-outline-warning w-100">register</button>
+                <div class="login-register">
+                    <p>already have an account?<a style="cursor: pointer;" class="login-link  text-info">log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+
+        const wrapper=document.querySelector('.wrapper');
+        const loginLink=document.querySelector('.login-link');
+        const registerLink=document.querySelector('.register-link');
+        const btnPopup=document.querySelector('.btnlogin-popup');
+        const iconClose=document.querySelector('.icon-close')
+        const navigation=document.querySelector('.navigation');
+
+        registerLink.addEventListener('click', ()=> {
+            wrapper.classList.add('active');
+
+        });
+
+        loginLink.addEventListener('click', ()=> {
+            wrapper.classList.remove('active');
+            
+        });
+
+        btnPopup.addEventListener('click', ()=> {
+            wrapper.classList.add('active-popup');
+            
+        });
+
+        iconClose.addEventListener('click', ()=> {
+            wrapper.classList.remove('active-popup');
+            
+        });
+
+        btnPopup .addEventListener('click', ()=> {
+            btnPopup . style . display = 'none';
+            navigation . style . display = 'none'
+        });
+
+        iconClose.addEventListener('click', ()=> {
+            btnPopup . style . display = 'inline';
+            navigation . style . display = 'flex'
+        });
+    </script>
+</body>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+</html>
+
+?>
