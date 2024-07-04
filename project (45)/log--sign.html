@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/log--sign.css">
+    <title>log---sign</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">sign Up</h1>
+            <form >
+                <div class="input-group">
+                    <div class="input-field" id="namefield">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password">
+                    </div>
+                    <p>lost password? <a href="#">click here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">sign up</button>
+                    <button type="button" class="disable" id="signinBtn">sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>
+    let signupBtn = document . getElementById ("signupBtn");
+    let signinBtn = document . getElementById ("signinBtn");
+    let namefield = document . getElementById ("namefield");
+    let title = document . getElementById ("title");
+
+
+
+    signinBtn . onclick = function() {
+        namefield.style.maxHeight= "0";
+        title.innerHTML="sign In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+    }
+    signupBtn . onclick = function() {
+        namefield . style . maxHeight = "60px";
+        title . innerHTML = "sign up";
+        signinBtn . classList . add ("disable");
+        signupBtn . classList . remove ("disable");
+    }
+</script>
+</body>
+</html>
