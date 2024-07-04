@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع بيع منتجات</title>
+    <link rel="stylesheet" href="cours.css">
+    <style>#btnup{
+        width: 40px;
+        height: 40px;
+        background-color: #01628e;
+        padding: 5px;
+        border: solid #0084ff;
+        border-radius: 50%;
+        text-align: center;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        transition: .5s;
+        display: none;
+    }
+    #btnup:hover{
+        background-color: #909090;
+        background-image: none;
+    }</style>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1>homos</h1>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input id="title" type="text" placeholder="title">
+            <div class="price">
+                <input onkeyup="gettotal()" placeholder="price" type="number"  id="price">
+                <input onkeyup="gettotal()" placeholder="taxes" type="number" id="taxes">
+                <input onkeyup="gettotal()" placeholder="ads" type="number"  id="ads">
+                <input onkeyup="gettotal()" placeholder="discount" type="number"  id="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number"  id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">create</button>\
+        </div>
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchData(this.value)" placeholder="search" type="text" id="search">
+                <div class="btnsearch">
+                    <button onclick="getSearchMood(this.id)" id="searchtitle">search by title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchcategary">search by categary</button>
+                </div>
+                <div id="deleteAll">
+
+                </div>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>categary</th>
+                        <th>update</th>
+                        <th>delate</th>
+                    </tr>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button id="btnup">up</button>
+    <script src="cours.js"></script>
+</body>
+</html>
